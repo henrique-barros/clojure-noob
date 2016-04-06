@@ -1,5 +1,6 @@
 (ns clojure-noob.core)
-(defn foo 
+
+(defn foo
   "I don't do a whole lot."
   [x]
   (println x "Hello, World!"))
@@ -11,10 +12,9 @@
 
 (defn error-messag
   [severity]
-  (str "SOME ERROR MESSAGE" 
+  (str "SOME ERROR MESSAGE"
        (if (= severity :mild)
          "mild" "doomed")))
-
 
 (defn dec-maker
   [n]
@@ -26,7 +26,7 @@
          result
          (recur
                 (dec count)
-                (dec result))))))   
+                (dec result))))))
 
 (defn dec-maker2
   [n]
@@ -55,3 +55,18 @@
       (let [current (add-part-number current i) first-part (first parts)]
         (recur (inc i) (into [] (set (into parts (set [current]))))
                   current)))))
+
+(defn my-sum
+  "Recursive implementation of sum"
+  [x y]
+  (let [sum (inc x)
+  new-y (dec y)]
+  (loop [new-value sum
+          countdown new-y]
+          (if (> countdown 0)
+            (recur (inc new-value) (dec countdown))
+            new-value))))
+
+(defn new-sum
+  [a b]
+  (+ a b))

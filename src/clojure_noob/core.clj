@@ -60,13 +60,32 @@
   "Recursive implementation of sum"
   [x y]
   (let [sum (inc x)
-  new-y (dec y)]
-  (loop [new-value sum
+    new-y (dec y)]
+    (loop [new-value sum
           countdown new-y]
           (if (> countdown 0)
             (recur (inc new-value) (dec countdown))
             new-value))))
 
-(defn new-sum
-  [a b]
-  (+ a b))
+(defn my-multiply
+  "Recursive implementation of multiplication"
+  [x y]
+  (loop [total x
+    timestoadd (dec y)]
+    (if (> timestoadd 0)
+      (recur (+ total x) (dec timestoadd))
+      total)))
+
+(defn my-integer-division
+  "Very-naive recursive implementation of the integer division of two natural numbers"
+  [x y]
+  (let [start y]
+    (if (> (* start y) x)
+      (loop [new-start start]
+        (if (<= (* new-start start) x)
+          new-start
+          (recur (dec new-start))))
+      (loop [new-start start]
+        (if (>= (* new-start start) x)
+          (if (= (* new-start start) x) new-start (dec new-start))
+          (recur (inc new-start)))))))

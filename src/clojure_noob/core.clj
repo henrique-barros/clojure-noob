@@ -113,3 +113,12 @@
   (fn [& args] (func1 (apply func2 args))))
 
 (def new-c-int (my-comp :intelligence :attributes))
+
+(defn my-assoc-in
+  "My implementation of assoc-in function"
+  [varmap vararray varvalue]
+  (let [head (first vararray)
+    tail (rest vararray)]
+    (if (empty? tail)
+      (assoc varmap head varvalue)
+      (assoc varmap head (my-assoc-in {} tail varvalue)))))

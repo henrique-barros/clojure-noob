@@ -89,3 +89,27 @@
         (if (>= (* new-start start) x)
           (if (= (* new-start start) x) new-start (dec new-start))
           (recur (inc new-start)))))))
+
+
+
+(def character
+  {:name "Smooches McCutes"
+   :attributes {:intelligence 10
+                :strength 4
+                :dexterity 5}})
+
+(def c-int (comp :intelligence :attributes))
+(def c-str (comp :strength :attributes))
+(def c-dex (comp :dexterity :attributes))
+
+(defn attr
+  "given attribute and character return the value"
+  [char attrType]
+  ((comp attrType :attributes) char))
+
+(defn my-comp
+  "Implementation of the comp function"
+  [func1 func2]
+  (fn [& args] (func1 (apply func2 args))))
+
+(def new-c-int (my-comp :intelligence :attributes))

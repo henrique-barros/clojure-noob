@@ -122,3 +122,12 @@
     (if (empty? tail)
       (assoc varmap head varvalue)
       (assoc varmap head (my-assoc-in {} tail varvalue)))))
+
+(defn my-update-in
+  "My implementation of update-in function"
+  [hash key func]
+  (let [firstkey (first key)
+    restkey (rest key)]
+    (if (empty? restkey)
+      (update hash firstkey func)
+      (assoc hash firstkey (my-update-in (get hash firstkey) restkey func)))))

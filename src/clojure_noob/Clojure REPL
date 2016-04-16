@@ -1,0 +1,311 @@
+;; This Clojure REPL is divided into two areas, top and bottom, delimited by a line of dashes. The top area shows code that's been executed in the REPL, standard out from running code, and the results of executed expressions. The bottom area allows Clojure code to be entered. The code can be executed by pressing shift+enter.
+
+;; Try it now by typing (+ 1 1) in the bottom section and pressing shift+enter.
+
+;; Working in another Clojure file and sending forms to the REPL is the most efficient way to work. Use the following key bindings to send code to the REPL. See the settings for more keybindings.
+
+;; ctrl-, then b - execute block. Finds the block of Clojure code your cursor is in and executes that.
+
+;; Try it now. Put your cursor inside this block and press ctrl and comma together,
+;; release, then press b.
+(+ 2 3)
+
+;; ctrl-, s - Executes the selection. Sends the selected text to the REPL.
+
+;; Try it now. Select these three lines and press ctrl and comma together, 
+;; release, then press s.
+(println "hello 1")
+(println "hello 2")
+(println "hello 3")
+
+;; You can disable this help text in the settings.
+Starting REPL with lein in /Developer/clojure/clojure-noob
+nREPL server started on port 52131 on host 127.0.0.1 - nrepl://127.0.0.1:52131
+user=>
+Refreshing code...
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(ns clojure-noob.core)
+clojure-noob.core=> nil
+(c-int character)
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: c-int in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init2179355538024980990.clj:1:5) 
+(c-str
+   character)
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: c-str in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init2179355538024980990.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading ()
+Refresh complete
+(c-str
+   character)
+   
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: c-str in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init2179355538024980990.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(c-str
+   character)
+   
+clojure-noob.core=> 4
+(c-int character)
+clojure-noob.core=> 10
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+java.lang.RuntimeException: EOF while reading, starting at line 105, compiling:(clojure_noob/core.clj:109:1)
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+java.lang.RuntimeException: EOF while reading, starting at line 105, compiling:(clojure_noob/core.clj:109:1)
+Refresh complete
+(attr character :intelligence)
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: attr in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init2179355538024980990.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+java.lang.RuntimeException: EOF while reading, starting at line 105, compiling:(clojure_noob/core.clj:109:1)
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+java.lang.RuntimeException: EOF while reading, starting at line 105, compiling:(clojure_noob/core.clj:109:1)
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(attr character :intelligence)
+clojure-noob.core=> nil
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(attr character :intelligence)
+clojure-noob.core=> 10
+(attr character :strength)
+clojure-noob.core=> 4
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+clojure.lang.LispReader$ReaderException: java.lang.RuntimeException: Unmatched delimiter: ), compiling:(clojure_noob/core.clj:113:20)
+Refresh complete
+(((my-comp) :intelligence :attributes) character)
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: my-comp in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init2179355538024980990.clj:1:7) 
+((my-comp :intelligence :attributes) character)
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: my-comp in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init2179355538024980990.clj:1:6) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+clojure.lang.LispReader$ReaderException: java.lang.RuntimeException: Unmatched delimiter: ), compiling:(clojure_noob/core.clj:113:20)
+Refresh complete
+((my-comp :intelligence :attributes) character)
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: my-comp in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init2179355538024980990.clj:1:6) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+clojure.lang.LispReader$ReaderException: java.lang.RuntimeException: Unmatched delimiter: ), compiling:(clojure_noob/core.clj:113:20)
+Refresh complete
+((my-comp :intelligence :attributes) character)
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: my-comp in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init2179355538024980990.clj:1:6) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+clojure.lang.LispReader$ReaderException: java.lang.RuntimeException: Unmatched delimiter: ), compiling:(clojure_noob/core.clj:113:21)
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+clojure.lang.LispReader$ReaderException: java.lang.RuntimeException: Unmatched delimiter: ), compiling:(clojure_noob/core.clj:113:21)
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+((my-comp :intelligence :attributes) character)
+clojure-noob.core=> ArityException Wrong number of args (0) passed to: core/my-comp/fn--6096  clojure.lang.AFn.throwArity (AFn.java:429)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+clojure.lang.ArityException: Wrong number of args (0) passed to: core/my-comp/fn--6564, compiling:(core.clj:115:16)
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+clojure.lang.ArityException: Wrong number of args (0) passed to: core/my-comp/fn--6602, compiling:(core.clj:115:16)
+Refresh complete
+((my-comp :intelligence :attributes) character)
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: my-comp in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init2179355538024980990.clj:1:6) 
+((my-comp :intelligence :attributes) character)
+
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: my-comp in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init2179355538024980990.clj:1:6) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+clojure.lang.ArityException: Wrong number of args (0) passed to: core/my-comp/fn--6642, compiling:(core.clj:115:16)
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+((my-comp :intelligence :attributes) character)
+
+clojure-noob.core=> 10
+((my-comp inc *) 2 3)
+clojure-noob.core=> ArityException Wrong number of args (2) passed to: core/my-comp/fn--6784  clojure.lang.AFn.throwArity (AFn.java:429)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+((my-comp :intelligence :attributes) character)
+
+clojure-noob.core=> nil
+((my-comp inc *) 2 3)
+clojure-noob.core=> ArityException Wrong number of args (2) passed to: core/my-comp/fn--7057  clojure.lang.AFn.throwArity (AFn.java:429)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+((my-comp :intelligence :attributes) character)
+
+
+clojure-noob.core=> 10
+((my-comp :intelligence :attributes) character)
+
+
+clojure-noob.core=> 10
+((my-comp inc *) 2 3)
+clojure-noob.core=> 7
+(assoc-in [:a :b :c] :d)
+clojure-noob.core=> ArityException Wrong number of args (2) passed to: core/assoc-in  clojure.lang.AFn.throwArity (AFn.java:429)
+(assoc-in {} [:a :b :c] :d)
+clojure-noob.core=> {:a {:b {:c :d}}}
+(assoc :key1 1 :key2 2)
+clojure-noob.core=> ClassCastException clojure.lang.Keyword cannot be cast to clojure.lang.Associative  clojure.lang.RT.assoc (RT.java:792)
+(assoc {} :key1 1 :key2 2)
+clojure-noob.core=> {:key1 1, :key2 2}
+(:key1 (assoc {} :key1 1 :key2 2))
+clojure-noob.core=> 1
+(assoc-in {} [:a] 1)
+clojure-noob.core=> {:a 1}
+(assoc-in {} [:a] 1 2)
+clojure-noob.core=> ArityException Wrong number of args (4) passed to: core/assoc-in  clojure.lang.AFn.throwArity (AFn.java:429)
+(assoc-in {:e 2} [:a] 1 2)
+clojure-noob.core=> ArityException Wrong number of args (4) passed to: core/assoc-in  clojure.lang.AFn.throwArity (AFn.java:429)
+(assoc-in {:e 2} [:a] 1
+  )
+clojure-noob.core=> {:e 2, :a 1}
+(assoc-in {:e 2} [:a :b] 1)
+clojure-noob.core=> {:e 2, :a {:b 1}}
+(empty? [])
+clojure-noob.core=> true
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(my-assoc-in {} [:a] 1)
+clojure-noob.core=> {:a 1}
+(my-assoc-in {} [:a :b :c] 1)
+clojure-noob.core=> {:a {:b {:c (:b :c)}}}
+(assoc-in {} [:a :b :c] 1)
+clojure-noob.core=> {:a {:b {:c 1}}}
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(assoc-in {} [:a :b :c] 1)
+clojure-noob.core=> {:a {:b {:c 1}}}
+(my-assoc-in {} [:a :b :c] 1)
+clojure-noob.core=> {:a {:b {:c 1}}}
+(assoc-in {} [:a :b :c] 1)
+clojure-noob.core=> {:a {:b {:c 1}}}
+(my-assoc-in {} [:a :b :c] 1)
+clojure-noob.core=> {:a {:b {:c 1}}}
+(my-assoc-in {:e 1} [:a :b :c :d] 1)
+clojure-noob.core=> {:e 1, :a {:b {:c {:d 1}}}}
+(assoc-in {:e 1} [:a :b :c :d] 1)
+clojure-noob.core=> {:e 1, :a {:b {:c {:d 1}}}}
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+java.lang.RuntimeException: Can't have 2 overloads with same arity, compiling:(clojure_noob/core.clj:117:1)
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+java.lang.RuntimeException: Can't have 2 overloads with same arity, compiling:(clojure_noob/core.clj:117:1)
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(my-assoc-in {:e 1} [:a :b :c :d] 1)
+clojure-noob.core=> {:e 1, :a {:b {:c {:d 1}}}}
+(assoc-in {:e 1} [:a :b :c :d] 1)
+clojure-noob.core=> {:e 1, :a {:b {:c {:d 1}}}}
+--------------------

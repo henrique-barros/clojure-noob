@@ -150,3 +150,18 @@
         (nth string 2)
         (nth string 4)))
      (nth string 6)))
+
+(defmacro when-valid
+  "Macro that does a series of actions if the condition
+  is true"
+  [condition & actions]
+  `(if ~condition (do ~@actions) nil))
+
+(defmacro OR
+  "implemenation of OR"
+  ([] true)
+  ([x] x)
+  ([x & next]
+    `(let [or# ~x]
+      (if or# or#
+        (OR ~@next)))))

@@ -689,5 +689,573 @@ Cleanliness is next to godliness
 Refresh complete
 (infix '(1 + 10 * 4 - 30))
 clojure-noob.core=> (- (+ 1 (* 10 4)) 30)
---------------------
 (eval (infix '(1 + 10 * 4 - 30)))
+clojure-noob.core=> 11
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when (+ 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> nil
+(when-valid (+ 1 2) (println "hello") (println "dear"))
+clojure-noob.core=> ClassCastException clojure.lang.ArraySeq cannot be cast to java.util.concurrent.Future  clojure.core/deref-future (core.clj:2206)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (+ 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval15897 (form-init7920886582756401462.clj:1)
+(when-valid (+ 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval15899 (form-init7920886582756401462.clj:1)
+(when (+ 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> nil
+(when-valid (+ 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval15903 (form-init7920886582756401462.clj:1)
+(when-valid (> 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval15912 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (> 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval15995 (form-init7920886582756401462.clj:1)
+(when (> 1 2) (println "hello") (println "dear"))
+clojure-noob.core=> nil
+(cons 1 2 3)
+clojure-noob.core=> ArityException Wrong number of args (3) passed to: core/cons--4331  clojure.lang.AFn.throwArity (AFn.java:429)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when (> 1 2) (println "hello") (println "dear"))
+clojure-noob.core=> nil
+(when-valid (> 1 2) (println "hello") (println "dear"))
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: do in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+java.lang.RuntimeException: Unable to resolve symbol: do in this context, compiling:(clojure_noob/core.clj:158:20)
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(cons 1 [1 2 3])
+clojure-noob.core=> (1 1 2 3)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+java.lang.RuntimeException: Unable to resolve symbol: do in this context, compiling:(clojure_noob/core.clj:158:20)
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+java.lang.RuntimeException: Unable to resolve symbol: do in this context, compiling:(clojure_noob/core.clj:158:21)
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+java.lang.RuntimeException: Unable to resolve symbol: do in this context, compiling:(clojure_noob/core.clj:158:20)
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (> 1 2) (println "hello") (println "dear"))
+clojure-noob.core=> IllegalStateException Attempting to call unbound fn: #'clojure.core/unquote  clojure.lang.Var$Unbound.throwArity (Var.java:43)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (> 1 2) (println "hello") (println "dear"))
+clojure-noob.core=> nil
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval16856 (form-init7920886582756401462.clj:1)
+(when-valid (> 1 2) (println "hello") (println "dear"))
+clojure-noob.core=> nil
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval16860 (form-init7920886582756401462.clj:1)
+(when (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> nil
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval16913 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval17003 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval17065 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval17127 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+clojure-noob.core=> (#object[clojure.core$cons__4331 0xd065c0d "clojure.core$cons__4331@d065c0d"] (quote do) ((println "hello") (println "dear")))
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval17332 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading ()
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval17400 (form-init7920886582756401462.clj:1)
+(when-valid (>
+   1 2) (println "hello") (println "dear"))
+clojure-noob.core=> nil
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval17411 (form-init7920886582756401462.clj:1)
+(when-valid (> 1 2) (println "hello") (println "dear"))
+clojure-noob.core=> nil
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading ()
+Refresh complete
+(when-valid (> 1 2) (println "hello") (println "dear"))
+clojure-noob.core=> nil
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval17437 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading ()
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> ArityException Wrong number of args (3) passed to: core/cons--4331  clojure.lang.AFn.throwArity (AFn.java:429)
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> ArityException Wrong number of args (3) passed to: core/cons--4331  clojure.lang.AFn.throwArity (AFn.java:429)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval17569 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+clojure-noob.core=> IllegalStateException Attempting to call unbound fn: #'clojure.core/unquote  clojure.lang.Var$Unbound.throwArity (Var.java:43)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Too many arguments to if, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval17773 (form-init7920886582756401462.clj:1)
+(when-valid (< 1 2) (println "hello"))
+hello
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval17775 (form-init7920886582756401462.clj:1)
+(do (prinln "hello") (println "dear"))
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: prinln in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:9) 
+(do (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> nil
+(cons 'do ['(println "hello") '(println "dear")])
+clojure-noob.core=> (do (println "hello") (println "dear"))
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(cons 'do ['(println "hello") '(println "dear")])
+clojure-noob.core=> (do (println "hello") (println "dear"))
+(when-valid (< 1 2) (println "hello"))
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: do in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+(when-valid (< 1 2) (println "hello") (println "dear"))
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: do in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval18160 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+clojure-noob.core=> CompilerException java.lang.RuntimeException: No such var: clojure-noob.core/actions, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval18311 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading ()
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval18379 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+clojure-noob.core=> IllegalStateException Attempting to call unbound fn: #'clojure.core/unquote  clojure.lang.Var$Unbound.throwArity (Var.java:43)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval18501 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval18563 (form-init7920886582756401462.clj:1)
+(when 
+  (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> nil
+(when-valid (< 1 2) (println "hello") (println "dear"))
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval18567 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+
+hello
+dear
+clojure-noob.core=> nil
+(when-valid (> 1 2) (println "hello") (println "dear"))
+
+clojure-noob.core=> nil
+(when-valid (< 1 2) (println "hello") (println "dear"))
+
+hello
+dear
+clojure-noob.core=> nil
+(when (< 1 2) (println "hello") (println "dear"))
+
+hello
+dear
+clojure-noob.core=> nil
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when (< 1 2) (println "hello") (println "dear"))
+
+hello
+dear
+clojure-noob.core=> nil
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when (< 1 2) (println "hello") (println "dear"))
+
+hello
+dear
+clojure-noob.core=> nil
+(when-valid (< 1 2) (println "hello") (println "dear"))
+
+clojure-noob.core=> CompilerException java.lang.RuntimeException: No such var: clojure-noob.core/actions, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+
+hello
+dear
+clojure-noob.core=> NullPointerException   clojure-noob.core/eval18941 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+
+hello
+dear
+clojure-noob.core=> nil
+(macroexpand '(when-valid (< 1 2) (println "hello") (println "dear")))
+clojure-noob.core=> (if (< 1 2) ((quote do) (println "hello") (println "dear")) nil)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+
+hello
+dear
+clojure-noob.core=> nil
+(when-valid (> 1 2) (println "hello") (println "dear"))
+
+clojure-noob.core=> nil
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(when-valid (< 1 2) (println "hello") (println "dear"))
+
+hello
+dear
+clojure-noob.core=> nil
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh failed: WARNING: or already refers to: #'clojure.core/or in namespace: clojure-noob.core, being replaced by: #'clojure-noob.core/or
+Refresh failed: WARNING: or already refers to: #'clojure.core/or in namespace: clojure-noob.core-test, being replaced by: #'clojure-noob.core/or
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(or 1 2 3)
+clojure-noob.core=> 1
+(OR 1 2 3)
+clojure-noob.core=> ClassCastException java.lang.Long cannot be cast to clojure.lang.IFn  clojure-noob.core/eval19864 (form-init7920886582756401462.clj:1)
+(macroexpand (OR 1 2 3))
+clojure-noob.core=> ClassCastException java.lang.Long cannot be cast to clojure.lang.IFn  clojure-noob.core/eval19972 (form-init7920886582756401462.clj:1)
+(macroexpand (OR [1 2 3]))
+clojure-noob.core=> [1 2 3]
+(OR [1 2 3])
+clojure-noob.core=> [1 2 3]
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(OR [1 2 3])
+clojure-noob.core=> [1 2 3]
+(OR 1 2 3)
+clojure-noob.core=> ClassCastException java.lang.Long cannot be cast to clojure.lang.IFn  clojure-noob.core/eval20131 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(OR 1 2 3)
+clojure-noob.core=> ClassCastException java.lang.Long cannot be cast to clojure.lang.IFn  clojure-noob.core/eval20200 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(OR 1 2 3)
+clojure-noob.core=> ClassCastException java.lang.Long cannot be cast to clojure.lang.IFn  clojure-noob.core/eval20270 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(OR 1 2 3)
+clojure-noob.core=> ClassCastException java.lang.Long cannot be cast to clojure.lang.IFn  clojure-noob.core/eval20361 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(OR 1 2 3)
+clojure-noob.core=> ClassCastException java.lang.Long cannot be cast to clojure.lang.IFn  clojure-noob.core/eval20431 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(OR 1 2 3)
+clojure-noob.core=> 1
+(OR nil 2 3)
+clojure-noob.core=> 2
+(OR nil nil 3)
+clojure-noob.core=> 3
+(OR nil nil nil)
+clojure-noob.core=> nil
+(OR nil nil false)
+clojure-noob.core=> false
+(OR nil nil true)
+clojure-noob.core=> true
+(OR nil true false)
+clojure-noob.core=> true
+--------------------

@@ -1,0 +1,693 @@
+;; This Clojure REPL is divided into two areas, top and bottom, delimited by a line of dashes. The top area shows code that's been executed in the REPL, standard out from running code, and the results of executed expressions. The bottom area allows Clojure code to be entered. The code can be executed by pressing shift+enter.
+
+;; Try it now by typing (+ 1 1) in the bottom section and pressing shift+enter.
+
+;; Working in another Clojure file and sending forms to the REPL is the most efficient way to work. Use the following key bindings to send code to the REPL. See the settings for more keybindings.
+
+;; ctrl-, then b - execute block. Finds the block of Clojure code your cursor is in and executes that.
+
+;; Try it now. Put your cursor inside this block and press ctrl and comma together,
+;; release, then press b.
+(+ 2 3)
+
+;; ctrl-, s - Executes the selection. Sends the selected text to the REPL.
+
+;; Try it now. Select these three lines and press ctrl and comma together, 
+;; release, then press s.
+(println "hello 1")
+(println "hello 2")
+(println "hello 3")
+
+;; You can disable this help text in the settings.
+Starting REPL with lein in /Developer/clojure/clojure-noob
+nREPL server started on port 64906 on host 127.0.0.1 - nrepl://127.0.0.1:64906
+user=>
+Refreshing code...
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(def users [{:name "James" :age 26}  {:name "John" :age 43}])
+user=> #'user/users
+(update-in users [:age] inc)
+user=> NullPointerException   clojure.lang.Numbers.ops (Numbers.java:1013)
+(update-in users [1 :age] inc)
+user=> [{:name "James", :age 26} {:name "John", :age 44}]
+(update-in users [0 :age 1 :age] inc)
+user=> NullPointerException   clojure.lang.Numbers.ops (Numbers.java:1013)
+(update-in users [1 :age] inc)
+user=> [{:name "James", :age 26} {:name "John", :age 44}]
+(def user {:name "James" :age 27})
+user=> #'user/user
+(update-in user :age inc)
+user=> UnsupportedOperationException nth not supported on this type: Keyword  clojure.lang.RT.nthFrom (RT.java:947)
+(update-in user [:age] inc)
+user=> {:name "James", :age 28}
+(get 1 users)
+user=> nil
+(get users 1)
+user=> {:name "John", :age 43}
+(get users 2
+  )
+user=> nil
+(get users 0
+  )
+user=> {:name "James", :age 26}
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(ns clojure.noob)
+clojure.noob=> nil
+(ns clojure-noob.core)
+clojure-noob.core=> nil
+(my-update-in {:age 1} :age 1)
+clojure-noob.core=> IllegalArgumentException Don't know how to create ISeq from: clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:542)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(update-in user :age inc)
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: user in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+(def user {:name "James" :age 27})
+clojure-noob.core=> #'clojure-noob.core/user
+(def user {:name "James" :age 27})
+clojure-noob.core=> #'clojure-noob.core/user
+(my-update-in user :age 1)
+clojure-noob.core=> IllegalArgumentException Don't know how to create ISeq from: clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:542)
+(my-update-in users :age 1)
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: users in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+(def users [{:name "James" :age 26}  {:name "John" :age 43}])
+clojure-noob.core=> #'clojure-noob.core/users
+(my-update-in users :age 1)
+clojure-noob.core=> IllegalArgumentException Don't know how to create ISeq from: clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:542)
+(my-update-in users [1 :age] 1)
+clojure-noob.core=> [{:name "James", :age 26} {:name "John", :age 43}]
+(my-update-in users [1 :age] inc)
+clojure-noob.core=> [{:name "James", :age 26} {:name "John", :age 43}]
+(my-update-in users [1 :age] inc)
+clojure-noob.core=> [{:name "James", :age 26} {:name "John", :age 43}]
+(get {:age 1 :name 2} :name)
+clojure-noob.core=> 2
+(update-in {:age 1 :a {:b {:c 1}}} [:a :b :c] inc)
+clojure-noob.core=> {:age 1, :a {:b {:c 2}}}
+(update-in {:age 1 :a {:b {:c 1}}} :age inc)
+clojure-noob.core=> UnsupportedOperationException nth not supported on this type: Keyword  clojure.lang.RT.nthFrom (RT.java:947)
+(update-in {:age 1, :a {:b {:c 1}}} :age inc)
+clojure-noob.core=> UnsupportedOperationException nth not supported on this type: Keyword  clojure.lang.RT.nthFrom (RT.java:947)
+(update-in {:age 1 :a {:b {:c 1}}} [:age] inc)
+clojure-noob.core=> {:age 2, :a {:b {:c 1}}}
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(my-update-in {:age 1 :a {:b {:c 1}}} [:age] inc)
+clojure-noob.core=> IllegalArgumentException Don't know how to create ISeq from: clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:542)
+(partial inc 1)
+clojure-noob.core=> #object[clojure.core$partial$fn__4759 0x21088d36 "clojure.core$partial$fn__4759@21088d36"]
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(partial inc 1)
+clojure-noob.core=> #object[clojure.core$partial$fn__4759 0x7e74e03d "clojure.core$partial$fn__4759@7e74e03d"]
+(my-update-in {:age 1 :a {:b {:c 1}}} [:age] inc)
+clojure-noob.core=> IllegalArgumentException Don't know how to create ISeq from: clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:542)
+(update (first [:age]) (partial inc (first-key hash)))
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: first-key in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:41) 
+(update (first [:age]) (partial inc (first-key {:age 1 :a {:b {:c 1}}})))
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: first-key in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:41) 
+(update (first [:age]) (partial inc ((first [:age]) {:age 1 :a {:b {:c 1}}})))
+clojure-noob.core=> ArityException Wrong number of args (2) passed to: core/update  clojure.lang.AFn.throwArity (AFn.java:429)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+java.lang.RuntimeException: Unmatched delimiter: ), compiling:(clojure_noob/core.clj:133:55)
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(my-update-in {:age 1 :a {:b {:c 1}}} [:age] inc)
+clojure-noob.core=> IllegalArgumentException Don't know how to create ISeq from: clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:542)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(my-update-in {:age 1 :a {:b {:c 1}}} [:age] inc)
+clojure-noob.core=> IllegalArgumentException Don't know how to create ISeq from: clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:542)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+java.lang.RuntimeException: Unable to resolve symbol: rest-key in this context, compiling:(clojure_noob/core.clj:131:9)
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+java.lang.RuntimeException: Unable to resolve symbol: first-key in this context, compiling:(clojure_noob/core.clj:133:21)
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(my-update-in {:age 1 :a {:b {:c 1}}} [:age] inc)
+clojure-noob.core=> IllegalArgumentException Don't know how to create ISeq from: clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:542)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(my-update-in {:age 1 :a {:b {:c 1}}} [:age] inc)
+clojure-noob.core=> IllegalArgumentException Don't know how to create ISeq from: clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:542)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(my-update-in {:age 1 :a {:b {:c 1}}} [:age] inc)
+clojure-noob.core=> ArityException Wrong number of args (2) passed to: core/update  clojure.lang.AFn.throwArity (AFn.java:429)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(my-update-in {:age 1 :a {:b {:c 1}}} [:age] inc)
+clojure-noob.core=> {:age 2, :a {:b {:c 1}}}
+(update-in {:age 1 :a {:b {:c 1}}} [:a :b :c] inc)
+clojure-noob.core=> {:age 1, :a {:b {:c 2}}}
+(my-update-in {:age 1 :a {:b {:c 1}}} [:a :b :c] inc)
+clojure-noob.core=> {:c 2}
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(my-update-in {:age 1 :a {:b {:c 1}}} [:a :b :c] inc)
+clojure-noob.core=> IllegalArgumentException assoc expects even number of arguments after map/vector, found odd number  clojure.core/assoc--4371 (core.clj:195)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(my-update-in {:age 1 :a {:b {:c 1}}} [:a :b :c] inc)
+clojure-noob.core=> {:age 1, :a {:b {:c 2}}}
+(my-update-in {:age 1 :a {:b {:c 1}}} [:age] inc)
+clojure-noob.core=> {:age 2, :a {:b {:c 1}}}
+(def users [{:name "James" :age 26}  {:name "John" :age 43}])
+clojure-noob.core=> #'clojure-noob.core/users
+(update-in users [1 :name] inc)
+clojure-noob.core=> ClassCastException java.lang.String cannot be cast to java.lang.Number  clojure.lang.Numbers.inc (Numbers.java:112)
+(update-in users [1 :age] inc)
+clojure-noob.core=> [{:name "James", :age 26} {:name "John", :age 44}]
+(my-update-in users [1 :age] inc)
+clojure-noob.core=> ClassCastException java.lang.Long cannot be cast to clojure.lang.IFn  clojure-noob.core/my-update-in (core.clj:133)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading ()
+Refresh complete
+(my-update-in users [1 :age] inc)
+clojure-noob.core=> ClassCastException java.lang.Long cannot be cast to clojure.lang.IFn  clojure-noob.core/my-update-in (core.clj:133)
+(update-in users [1 :age] inc)
+clojure-noob.core=> [{:name "James", :age 26} {:name "John", :age 44}]
+(get users 1)
+clojure-noob.core=> {:name "John", :age 43}
+(get {:age 1 :name 2} :age)
+clojure-noob.core=> 1
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(my-update-in users [1 :age] inc)
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: users in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+(def users [{:name "James" :age 26}  {:name "John" :age 43}])
+clojure-noob.core=> #'clojure-noob.core/users
+(my-update-in users [1 :age] inc)
+clojure-noob.core=> [{:name "James", :age 26} {:name "John", :age 44}]
+(my-update-in users [0 :age] inc)
+clojure-noob.core=> [{:name "James", :age 27} {:name "John", :age 43}]
+(my-update-in users [0 :age] inc)
+clojure-noob.core=> [{:name "James", :age 27} {:name "John", :age 43}]
+(my-update-in users [1 :age] inc)
+clojure-noob.core=> [{:name "James", :age 26} {:name "John", :age 44}]
+(my-update-in {:age 1 :a {:b {:c 1}}} [:age] inc)
+clojure-noob.core=> {:age 2, :a {:b {:c 1}}}
+(my-update-in {:age 1 :a {:b {:c 1}}} [:a :b :c] inc)
+clojure-noob.core=> {:age 1, :a {:b {:c 2}}}
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> Henrique
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> Henrique
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: Henrique in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: Henrique in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+java.lang.RuntimeException: Unmatched delimiter: ), compiling:(clojure_noob/core.clj:135:99)
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: Henrique in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+java.lang.ClassCastException: clojure.lang.PersistentList cannot be cast to java.lang.String, compiling:(core.clj:135:33)
+Refresh complete
+(read-string "teste")
+clojure-noob.core=> teste
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(read-string "teste")
+clojure-noob.core=> teste
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> Teste
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> ClassCastException java.lang.String cannot be cast to clojure.lang.IPersistentMap  clojure.lang.LispReader.installPlatformFeature (LispReader.java:214)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: read-string' in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> ArityException Wrong number of args (3) passed to: core/read-string  clojure.lang.AFn.throwArity (AFn.java:429)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> Henrique
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> HenriqueLock
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> Henrique
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> NullPointerException   java.io.StringReader.<init> (StringReader.java:50)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> ArityException Wrong number of args (13) passed to: core/read-string  clojure.lang.AFn.throwArity (AFn.java:429)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> CompilerException java.lang.IllegalArgumentException: Can't call nil, form: (nil nil nil nil nil nil nil), compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: Henrique in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> ClassCastException java.lang.String cannot be cast to clojure.lang.IFn  clojure-noob.core/eval11335 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+clojure.lang.ArityException: Wrong number of args (7) passed to: Symbol, compiling:(core.clj:135:39)
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> Henrique
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> (println Henrique Barros)
+(eval (eval my-name-and-favorite-movie))
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: Henrique in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval (eval my-name-and-favorite-movie))
+Henrique Barros
+clojure-noob.core=> NullPointerException   java.io.StringReader.<init> (StringReader.java:50)
+(eval (eval my-name-and-favorite-movie))
+Henrique Barros
+clojure-noob.core=> NullPointerException   java.io.StringReader.<init> (StringReader.java:50)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval (eval my-name-and-favorite-movie))
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: Henrique in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval (eval my-name-and-favorite-movie))
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: Henrique in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading ()
+Refresh complete
+(eval (eval my-name-and-favorite-movie))
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: Henrique in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval (eval my-name-and-favorite-movie))
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: Henrique in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval (eval my-name-and-favorite-movie))
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: Henrique in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading ()
+Refresh complete
+(ns clojure-noob.core)
+clojure-noob.core=> nil
+(ns clojure-noob.core)
+clojure-noob.core=> nil
+(eval (eval my-name-and-favorite-movie))
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: Henrique in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> Henrique
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> (Henrique Barros)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(eval my-name-and-favorite-movie)
+clojure-noob.core=> (println "Henrique Barros")
+(eval (eval my-name-and-favorite-movie))
+Henrique Barros
+clojure-noob.core=> nil
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(my-name2)
+clojure-noob.core=> ClassCastException clojure.lang.PersistentList cannot be cast to clojure.lang.IFn  clojure-noob.core/eval12438 (form-init7920886582756401462.clj:1)
+(eval my-name2)
+Henrique Barros
+clojure-noob.core=> nil
+(third (1 2 3))
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: third in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+(second (1 2 3))
+clojure-noob.core=> ClassCastException java.lang.Long cannot be cast to clojure.lang.IFn  clojure-noob.core/eval12690 (form-init7920886582756401462.clj:1)
+(second '(1 2 3))
+clojure-noob.core=> 2
+(third '(1 2 3))
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: third in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+(3rd '(1 2 3))
+clojure-noob.core=> NumberFormatException For input string: "d"  java.lang.NumberFormatException.forInputString (NumberFormatException.java:65)
+clojure-noob.core=> (1 2 3)
+clojure-noob.core=> RuntimeException Unmatched delimiter: )  clojure.lang.Util.runtimeException (Util.java:221)
+clojure-noob.core=> RuntimeException Unmatched delimiter: )  clojure.lang.Util.runtimeException (Util.java:221)
+(third '(1 2 3))
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: third in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+(get '(1 2 3) 3)
+clojure-noob.core=> nil
+(get '(1 2 3) 2)
+clojure-noob.core=> nil
+(get 2 '(1 2 3))
+clojure-noob.core=> nil
+(get 0 '(1 2 3))
+clojure-noob.core=> nil
+(nth '(1 2 3) 3)
+clojure-noob.core=> IndexOutOfBoundsException   clojure.lang.RT.nthFrom (RT.java:885)
+(nth '(1 2 3) 2)
+clojure-noob.core=> 3
+(infix [1 + 3 * 4 - 5])
+clojure-noob.core=> CompilerException java.lang.RuntimeException: Unable to resolve symbol: infix in this context, compiling:(/private/var/folders/0d/nxqs5s_s6lz3pygkby1zb2lc0000gn/T/form-init7920886582756401462.clj:1:5) 
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(infix [1 + 3 * 4 - 5])
+clojure-noob.core=> ClassCastException java.lang.Long cannot be cast to clojure.lang.IFn  clojure-noob.core/infix (core.clj:141)
+(infix "(1 + 3 * 4 - 5)")
+clojure-noob.core=> ClassCastException java.lang.Character cannot be cast to clojure.lang.IFn  clojure-noob.core/infix (core.clj:141)
+(infix "1 + 3 * 4 - 5")
+clojure-noob.core=> ClassCastException java.lang.Character cannot be cast to clojure.lang.IFn  clojure-noob.core/infix (core.clj:141)
+(infix '(1 + 3 * 4 - 5))
+clojure-noob.core=> ClassCastException java.lang.Long cannot be cast to clojure.lang.IFn  clojure-noob.core/infix (core.clj:141)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading ()
+Refresh complete
+(ns clojure-noob.core)
+clojure-noob.core=> nil
+(infix '(1 + 3 * 4 - 5))
+clojure-noob.core=> ClassCastException java.lang.Long cannot be cast to clojure.lang.IFn  clojure-noob.core/infix (core.clj:141)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(infix '(1 + 3 * 4 - 5))
+clojure-noob.core=> ClassCastException java.lang.Long cannot be cast to clojure.lang.IFn  clojure-noob.core/infix (core.clj:141)
+(nth '(1 + 2) 1)
+clojure-noob.core=> +
+(list (nth '(1 + 2) 1) (nth '(1 + 2) 0) (nth '(1 + 2) 2))
+clojure-noob.core=> (+ 1 2)
+(eval (list (nth '(1 + 2) 1) (nth '(1 + 2) 0) (nth '(1 + 2) 2)))
+clojure-noob.core=> 3
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(infix '(1 + 3 * 4 - 5))
+clojure-noob.core=> ClassCastException java.lang.Long cannot be cast to clojure.lang.IFn  clojure-noob.core/infix (core.clj:141)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(infix '(1 + 3 * 4 - 5))
+clojure-noob.core=> ClassCastException java.lang.Long cannot be cast to clojure.lang.IFn  clojure-noob.core/eval14350 (form-init7920886582756401462.clj:1)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(infix '(1 + 3 * 4 - 5))
+clojure-noob.core=> ClassCastException java.lang.Long cannot be cast to clojure.lang.IFn  clojure-noob.core/eval14409 (form-init7920886582756401462.clj:1)
+(eval (+ 1 2))
+clojure-noob.core=> 3
+(eval (+ 1 (eval (+ 1 1))))
+clojure-noob.core=> 3
+(eval (+ 1 (eval '(+ 1 1))))
+clojure-noob.core=> 3
+(eval '(+ 1 (eval '(+ 1 1))))
+clojure-noob.core=> 3
+(defn infix
+  [string]
+  (eval
+    (list
+      -
+      (eval
+        (list
+          +
+          1
+          (eval
+            (list
+              *
+              3
+              4))))
+       5)))
+clojure-noob.core=> #'clojure-noob.core/infix
+(infix 'a)
+clojure-noob.core=> 8
+(nth '(1 + 3 * 4 - 5) 5)
+clojure-noob.core=> -
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(infix '(1 + 10 * 4 - 30))
+clojure-noob.core=> 11
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(infix '(1 + 10 * 4 - 30))
+clojure-noob.core=> (- 41 30)
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+:error-while-loading clojure-noob.core
+java.lang.RuntimeException: Unable to resolve symbol: string in this context, compiling:(clojure_noob/core.clj:152:6)
+Refresh complete
+Refreshing code...
+No user namespace defined. Defaulting to clojure.tools.namespace.repl/refresh.
+
+:reloading (clojure-noob.core clojure-noob.core-test)
+Cleanliness is next to godliness
+Refresh complete
+(infix '(1 + 10 * 4 - 30))
+clojure-noob.core=> (- (+ 1 (* 10 4)) 30)
+--------------------
+(eval (infix '(1 + 10 * 4 - 30)))
